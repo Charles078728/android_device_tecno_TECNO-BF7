@@ -19,10 +19,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.mt6761 \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.mt6761 
 
 
 PRODUCT_PACKAGES += \
