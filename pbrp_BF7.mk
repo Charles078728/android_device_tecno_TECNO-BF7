@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from PitchBlack Recovery's custom product configuration instead of OmniROM's
 # Delete any line that imports OmniROM's vendor config
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Now add device specific BRAND, MODEL, BOARD, Props, etc. if needed.
 # Set those variables here to overwrite the inherited values.
