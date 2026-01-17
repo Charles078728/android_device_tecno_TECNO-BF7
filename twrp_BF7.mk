@@ -27,7 +27,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_BRAND := TECNO
 PRODUCT_DEVICE := BF7
-PRODUCT_NAME := pbrp_BF7
+PRODUCT_NAME := twrp_BF7
 PRODUCT_MANUFACTURER := Tecno
 PRODUCT_MODEL := TECNO BF7
 
