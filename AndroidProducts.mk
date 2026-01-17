@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pbrp_BF7.mk
+    $(LOCAL_DIR)/twrp_BF7.mk
 
 COMMON_LUNCH_CHOICES := \
-    pbrp_BF7-user \
-    pbrp_BF7-userdebug \
-    pbrp_BF7-eng
+    twrp_BF7-user \
+    twrp_BF7-userdebug \
+    twrp_BF7-eng
