@@ -1,35 +1,25 @@
+#
+# Copyright (C) 2025 The Android Open Source Project
+# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
-
-# Add this line if your device is 64-bit
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-# Otherwise, If you have 32-bit device, add the below line instead of above line
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from main device makefile, if had any. Otherwise, ignore.
-$(call inherit-product, device/tecno/BF7/device.mk)
-
-# If your device is treble compatible (64-bit), add below line
-$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common_64.mk)
-
-# For some dalvik improvement, better to keep it
-$(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
-
-# If you want full multilingual support
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Inherit from PitchBlack Recovery's custom product configuration instead of OmniROM's
-# Delete any line that imports OmniROM's vendor config
+# Inherit some common Omni stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Now add device specific BRAND, MODEL, BOARD, Props, etc. if needed.
-# Set those variables here to overwrite the inherited values.
-PRODUCT_BRAND := TECNO
-PRODUCT_DEVICE := BF7
+# Inherit from TECNO-BF7 device
+$(call inherit-product, device/tecno/BF7/device.mk)
+
+PRODUCT_DEVICE := TECNO-BF7
 PRODUCT_NAME := twrp_BF7
-PRODUCT_MANUFACTURER := Tecno
+PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO BF7
+PRODUCT_MANUFACTURER := tecno
 
 PRODUCT_GMS_CLIENTID_BASE := android-tecno
 
