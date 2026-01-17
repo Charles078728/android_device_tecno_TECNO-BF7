@@ -19,11 +19,23 @@
 /persist            ext4      /dev/block/platform/bootdevice/by-name/persist                        flags=display="Persist";backup=1;flashimg=1;
 /persistent         emmc      /dev/block/platform/bootdevice/by-name/frp                            flags=display="Persistent";backup=1;flashimg=1;
 /nvram              emmc      /dev/block/platform/bootdevice/by-name/nvram                          flags=display="Nvram";backup=1;flashimg=1;
-/boot               emmc      /dev/block/platform/bootdevice/by-name/boot                           flags=display="Boot";backup=1;flashimg=1;slotselect;
-/vendor_boot        emmc      /dev/block/platform/bootdevice/by-name/vendor_boot_a                  flags=disable="Vendor_boot_a";backup=1;flashingimg=1;slotselect;
-/logo               emmc      /dev/block/platform/bootdevice/by-name/logo                           flags=display="Logo";backup=1;flashimg=1;slotselect;                 
-/lk                 emmc      /dev/block/platform/bootdevice/by-name/lk_a                     flags=display="Lk1";backup=1;flashimg=1;
-/lk2                emmc      /dev/block/platform/bootdevice/by-name/lk_b                    flags=display="Lk2";backup=1;flashimg=1;
+/proinfo            emmc      /dev/block/platform/bootdevice/by-name/proinfo
+/boot               emmc      /dev/block/platform/bootdevice/by-name/boot                           flags=display="Boot";flashimg=1;slotselect;
+/logo               emmc      /dev/block/platform/bootdevice/by-name/logo                           flags=display="Logo";backup=1;flashimg=1;slotselect;
+/expdb              emmc      /dev/block/platform/bootdevice/by-name/expdb
+/seccfg             emmc      /dev/block/platform/bootdevice/by-name/seccfg                       
+/scp1               emmc      /dev/block/platform/bootdevice/by-name/scp1                       
+/scp2               emmc      /dev/block/platform/bootdevice/by-name/scp2                   
+/gz1                emmc      /dev/block/platform/bootdevice/by-name/gz1                   
+/gz2                emmc      /dev/block/platform/bootdevice/by-name/gz2                 
+/spmfw              emmc      /dev/block/platform/bootdevice/by-name/spmfw                  
+/dtbo               emmc      /dev/block/platform/bootdevice/by-name/dtbo                  
+/otp                emmc      /dev/block/platform/bootdevice/by-name/otp                   
+/tkv                emmc      /dev/block/platform/bootdevice/by-name/tkv                       
+/lk                 emmc      /dev/block/platform/bootdevice/by-name/bootloader                     flags=display="Lk1";backup=1;flashimg=1;
+/lk2                emmc      /dev/block/platform/bootdevice/by-name/bootloader2                    flags=display="Lk2";backup=1;flashimg=1;
+/tee1		    	emmc      /dev/block/platform/bootdevice/by-name/tee1
+/tee2		    	emmc      /dev/block/platform/bootdevice/by-name/tee2
 
 /super_image       emmc     /dev/block/platform/bootdevice/by-name/super            flags=display="Super (Image)";backup=1;flashimg=1;
 
