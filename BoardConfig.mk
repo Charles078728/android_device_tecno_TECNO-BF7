@@ -146,3 +146,6 @@ TW_USB_STORAGE := true
 
 # no recovery partition
 TW_HAS_NO_RECOVERY_PARTITION := true
+
+#Pitch Black Flags
+PB_TORCH_MAX_BRIGHTNESS := 1
