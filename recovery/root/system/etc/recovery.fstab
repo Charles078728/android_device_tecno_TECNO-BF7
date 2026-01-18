@@ -26,7 +26,6 @@ product /product ext4 ro wait,avb,logical,first_stage_mount,slotselect
 
 
 
-
 /dev/block/by-name/tranfs /tranfs ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable,nofail,first_stage_mount
 
 
