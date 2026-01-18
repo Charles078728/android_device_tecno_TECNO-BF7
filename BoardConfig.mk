@@ -128,6 +128,7 @@ TW_DEFAULT_BRIGHTNESS := 1027
 TW_MAX_BRIGHTNESS := 4095
 TW_NO_LEGACY_PROPS := true                   # Android 13+
 TW_DEVICE_VERSION := BF7            # Just for tracking
+TW_HAS_NO_RECOVERY_PARTITION := true     # If recovery is in boot (A/B)
 
 # Tools
 TW_INCLUDE_FB2PNG       := true
