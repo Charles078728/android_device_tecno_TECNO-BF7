@@ -126,6 +126,11 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_DEFAULT_BRIGHTNESS := 1027
 TW_MAX_BRIGHTNESS := 4095
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true                  # File-based encryption support
+TW_INCLUDE_FBE_METADATA_DECRYPT := true        # Metadata decrypt (critical for Android 11–13)                  # Sometimes needed for fscrypt
+BOARD_ROOT_EXTRA_FOLDERS += metadata           # Mounts metadata partition for key access                     # Optional but useful for exFAT/NTFS SD
+
 # Tools
 TW_INCLUDE_FB2PNG       := true
 TW_INCLUDE_REPACKTOOLS  := true
