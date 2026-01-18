@@ -149,9 +149,4 @@ TW_USE_FSCRYPT_POLICY := true                # Sometimes needed
 TW_INCLUDE_NTFS_3G := true                   # If exFAT/NTFS on SD
 BOARD_ROOT_EXTRA_FOLDERS += metadata         # Very important for metadata partition
 
-# USB OTG
-TW_USB_STORAGE := true
-
-# no recovery partition
-TW_HAS_NO_RECOVERY_PARTITION := true
 
