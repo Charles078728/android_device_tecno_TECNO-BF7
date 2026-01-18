@@ -126,10 +126,11 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_DEFAULT_BRIGHTNESS := 1027
 TW_MAX_BRIGHTNESS := 4095
+TW_NO_LEGACY_PROPS := true                   # Android 13+
+TW_DEVICE_VERSION := BF7            # Just for tracking
 
 # Tools
 TW_INCLUDE_FB2PNG       := true
-TW_INCLUDE_NTFS_3G      := true
 TW_INCLUDE_REPACKTOOLS  := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP    := true
@@ -139,6 +140,14 @@ TW_INCLUDE_FUSE_EXFAT   := true
 TW_INCLUDE_RESETPROP_SOURCE := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_LIBRESETPROP_SOURCE := true
+
+# Decryption / Encryption support (critical for Android 11+)
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true                # File-Based Encryption
+TW_INCLUDE_FBE_METADATA_DECRYPT := true      # Metadata decrypt (Android 12/13+ must-have)
+TW_USE_FSCRYPT_POLICY := true                # Sometimes needed
+TW_INCLUDE_NTFS_3G := true                   # If exFAT/NTFS on SD
+BOARD_ROOT_EXTRA_FOLDERS += metadata         # Very important for metadata partition
 
 # USB OTG
 TW_USB_STORAGE := true
