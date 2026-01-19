@@ -1,4 +1,4 @@
-n early-init
+on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
 on post-fs
