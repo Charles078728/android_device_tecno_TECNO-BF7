@@ -117,22 +117,19 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Vendor Modules
 
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules) $(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules)\")
-
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
-TW_DEFAULT_BRIGHTNESS := 1027
+TW_INCLUDE_REPACKTOOLS := true
+TW_DEFAULT_BRIGHTNESS := 2047
 TW_MAX_BRIGHTNESS := 4095
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true                  # File-based encryption support
-TW_INCLUDE_FBE_METADATA_DECRYPT := true        # Metadata decrypt (critical for Android 11–13)                  # Sometimes needed for fscrypt
-BOARD_ROOT_EXTRA_FOLDERS += metadata           # Mounts metadata partition for key access                     # Optional but useful for exFAT/NTFS SD
 
 # Tools
 TW_INCLUDE_FB2PNG       := true
+TW_INCLUDE_NTFS_3G      := true
 TW_INCLUDE_REPACKTOOLS  := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP    := true
@@ -143,6 +140,9 @@ TW_INCLUDE_RESETPROP_SOURCE := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_LIBRESETPROP_SOURCE := true
 
-# no recovery partition
+# USB OTG
+TW_USB_STORAGE := true
+
+#No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
