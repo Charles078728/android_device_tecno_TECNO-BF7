@@ -43,6 +43,9 @@ export FOX_BUILD_TYPE="Stable"
 # OrangeFox Addons
 export FOX_ENABLE_APP_MANAGER=1
 
+# Partitions
+export FOX_AB_DEVICE=1
+
 # Binaries & Tools
 export FOX_USE_BASH_SHELL=1
 export FOX_ASH_IS_BASH=1
