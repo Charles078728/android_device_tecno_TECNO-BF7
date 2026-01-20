@@ -113,3 +113,8 @@ product /product ext4 ro wait,avb,logical,first_stage_mount,slotselect
 
 
 /dev/block/by-name/tkv /tkv emmc defaults defaults
+
+
+
+
+/dev/block/by-name/tkv /tkv emmc defaults defaults
