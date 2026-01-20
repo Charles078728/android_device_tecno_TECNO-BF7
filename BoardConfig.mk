@@ -147,3 +147,6 @@ TW_USB_STORAGE := true
 #No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+#PBRP Flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+
