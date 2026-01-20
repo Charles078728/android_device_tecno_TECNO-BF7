@@ -5,25 +5,19 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := BF7
-DEVICE_PATH := device/tecno/BF7
-
-# Inherit any OrangeFox-specific settings
-$(call inherit-product-if-exists, device/tecno/BF7/fox_BF7.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from TECNO-BF7 device
 $(call inherit-product, device/tecno/BF7/device.mk)
 
 PRODUCT_DEVICE := BF7
-PRODUCT_NAME := fox_BF7
+PRODUCT_NAME := pb_BF7
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO BF7
 PRODUCT_MANUFACTURER := tecno
