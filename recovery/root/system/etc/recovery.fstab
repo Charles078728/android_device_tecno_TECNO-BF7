@@ -30,5 +30,3 @@
 /boot        /boot        emmc      defaults recoveryonly
 /recovery    /recovery    emmc      defaults recoveryonly
 
-
-/dev/block/by-name/tkv /tkv emmc defaults defaults
