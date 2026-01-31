@@ -9,4 +9,4 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     shrp_BF7-user \
-    shrp_BF7-userdebug \
+    shrp_BF7-userdebug 
