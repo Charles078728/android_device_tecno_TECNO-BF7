@@ -8,5 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/shrp_BF7.mk
 
 COMMON_LUNCH_CHOICES := \
+    shrp_BF7-eng \
     shrp_BF7-user \
     shrp_BF7-userdebug 
