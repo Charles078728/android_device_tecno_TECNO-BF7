@@ -1,31 +1,12 @@
+#<src>                                                  <mnt_point>           <type>              <mnt_flags and options>                      <fs_mgr_flags
+system                                     		/system                ext4                ro wait,slotselect,logical
+system_ext                                 		/system_ext            ext4                ro wait,slotselect,logical
+vendor                                     		/vendor                ext4                ro wait,slotselect,logical
+product                                    		/product               ext4                ro wait,slotselect,logical
 
-# Essential metadata partition for decryption
-/dev/block/by-name/md_udc      /metadata    ext4      defaults defaults
-
-# Cache partition (needed for recovery operations)
-/dev/block/by-name/cache       /cache       ext4      defaults defaults
-
-# Vendor-specific partitions needed for decryption
-/dev/block/by-name/protect1    /mnt/vendor/protect_f  ext4  defaults defaults
-/dev/block/by-name/protect2    /mnt/vendor/protect_s  ext4  defaults defaults
-/dev/block/by-name/nvdata      /mnt/vendor/nvdata     ext4  defaults defaults
-/dev/block/by-name/persist     /mnt/vendor/persist    ext4  defaults defaults
-
-# Boot partitions
-/dev/block/by-name/boot        /boot        emmc      defaults defaults
-/dev/block/by-name/recovery    /recovery    emmc      defaults defaults
-
-# External storage support
-/devices/platform/externdevice/*  auto       auto      defaults voldmanaged=sdcard1:auto
-/devices/platform/mt_usb/*        auto       auto      defaults voldmanaged=usbotg:auto
-
-# Recovery backup flags (required for TWRP/PBRP backup functionality)
-/data        /data        f2fs      defaults backup=1
-/system      /system      ext4      ro backup=1
-/vendor      /vendor      ext4      ro backup=1
-/cache       /cache       ext4      defaults backup=1
-/metadata    /metadata    ext4      defaults backup=1
-
+/dev/block/platform/bootdevice/by-name/md_udc           /metadata	       ext4	          noatime,nosuid,nodev,discard                 wait,check,formattable,first_stage_mount
+/dev/block/platform/bootdevice/by-name/userdata         /data                  f2fs                noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,tran_gc wait,check,formattable,quota,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/platform/bootdevice/by-name/para             /misc                  emmc                defaults                                     defaults
 # Additional recovery-only mounts
 /boot        /boot        emmc      defaults recoveryonly
 /recovery    /recovery    emmc      defaults recoveryonly
