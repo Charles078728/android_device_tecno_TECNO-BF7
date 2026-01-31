@@ -147,3 +147,14 @@ TW_USB_STORAGE := true
 #No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+#SHRP Flags
+SHRP_DEVICE_CODE := BF7
+SHRP_PATH := device/tecno/BF7
+SHRP_MAINTAINER := LouYa
+SHRP_DEVICE_TYPE := A/B
+SHRP_AB := true
+SHRP_FLASH := 0
+SHRP_OTG := /usb_otg
+SHRP_DARK := true
+SHRP_EXTERNAL := /external_sd
+SHRP_DEVICE_CODE := <device-codename>
