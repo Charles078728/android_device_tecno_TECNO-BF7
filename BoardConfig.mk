@@ -157,4 +157,3 @@ SHRP_FLASH := 0
 SHRP_OTG := /usb_otg
 SHRP_DARK := true
 SHRP_EXTERNAL := /external_sd
-SHRP_DEVICE_CODE := <device-codename>
