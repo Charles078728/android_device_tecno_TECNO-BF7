@@ -16,6 +16,14 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit from TECNO-BF7 device
 $(call inherit-product, device/tecno/BF7/device.mk)
 
+PRODUCT_RELEASE_NAME := BF7
+
+#Device path for OEM device tree
+DEVICE_PATH := device/tecno/BF7
+
+#Inherit any OrangeFox-specific settings
+$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
+
 PRODUCT_DEVICE := BF7
 PRODUCT_NAME := twrp_BF7
 PRODUCT_BRAND := TECNO
