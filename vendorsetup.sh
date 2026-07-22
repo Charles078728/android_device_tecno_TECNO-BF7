@@ -33,6 +33,7 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
+    lunch twrp_$FDEVICE-eng
     export FOX_AB_DEVICE=1
     export TARGET_ARCH=arm64
 
