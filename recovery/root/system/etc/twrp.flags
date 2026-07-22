@@ -1,17 +1,11 @@
 #fstab file by lopestom for OUKITEL C22_2201_V2076 - ASW1910QYJ_2201_V2076
 #
 # mount point
-/system		         emmc	        /dev/block/mapper/syste       flags=backup=1;display="System Image";backup=1;flashimg=1;slotselect
-/vendor             emmc        /dev/block/mapper/vendor      flags=backup=1;display="Vendor Image";backup=1;flashimg=1;slotselect
-/product            emmc        /dev/block/mapper/product     flags=backup=1;display="Product Image";backup=1;flashimg=1;slotselect
-/system_ext		         emmc	        /dev/block/mapper/system_ext     flags=backup=1;display="System Ext Image";backup=1;flashimg=1;slotselect
+/system_image		         ext4	        /dev/block/mapper/system      flags=backup=1;display="System Image";backup=1;flashimg=1;slotselect
+/vendor_image            ext4        /dev/block/mapper/vendor      flags=backup=1;display="Vendor Image";backup=1;flashimg=1;slotselect
+/product_image            ext4        /dev/block/mapper/product     flags=backup=1;display="Product Image";backup=1;flashimg=1;slotselect
+/system_ext_image		         ext4	        /dev/block/mapper/system_ext     flags=backup=1;display="System Ext Image";backup=1;flashimg=1;slotselect
 
-# Dynamic partition
-
-/system		         ext4	        /dev/block/mapper/system      flags=backup=1;display="System Othrr";backup=0;wipeingui=1;slotselect
-/vendor             ext4        /dev/block/mapper/vendor     flags=backup=1;display="Vendor Other";backup=0;wipeingui=1;slotselect
-/product            ext4        /dev/block/mapper/product     flags=backup=1;display="Product Other";backup=0;wipeingui=1;slotselect
-/system_ext		         ext4	        /dev/block/mapper/system_ext      flags=backup=1;display="System Ext Other";backup=0;flashimg=1;slotselect
 
 # Core Partitions
 /metadata             ext4    /dev/block/platform/bootdevice/by-name/md_udc         flags=backup=1;display="metadata"
