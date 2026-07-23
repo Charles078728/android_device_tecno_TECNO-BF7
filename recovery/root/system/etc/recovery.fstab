@@ -11,7 +11,7 @@ vendor                                                 /vendor                ex
 
 # Userdata partition
 /dev/block/platform/bootdevice/by-name/md_udc        /metadata   ext4        noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
-/dev/block/platform/bootdevice/by-name/userdata      /data       ext4        noatime,nosuid,nodev,noauto_da_alloc,errors=panic wait,check,quota,reservedsize=128M,formattable,resize,checkpoint=block,fileencryption=aes-256-xts
+/dev/block/platform/bootdevice/by-name/userdata  /data  ext4  noatime,nosuid,nodev,noauto_da_alloc,errors=panic  wait,check,formattable,fileencryption=aes-256-xts
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
