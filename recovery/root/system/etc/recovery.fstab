@@ -2,17 +2,22 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#<src>				<mnt_point>		<type>		<mnt_flags and options>															<fs_mgr_flags>
+#<src>                                          <mnt_point>      <type>   <mnt_flags and options>            <fs_mgr_flags>
 # Logical partitions
-system                                                 /system                ext4     ro                                wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
-system_ext                                             /system_ext            ext4     ro                                wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
-product                                                /product               ext4     ro                                wait,avb,logical,first_stage_mount
-vendor                                                 /vendor                ext4     ro                                wait,avb,logical,first_stage_mount
+system                                          /system          ext4     ro                                 wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,slotselect
+system_ext                                      /system_ext      ext4     ro                                 wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,slotselect
+product                                         /product         ext4     ro                                 wait,avb,logical,first_stage_mount,slotselect
+vendor                                          /vendor          ext4     ro                                 wait,avb,logical,first_stage_mount,slotselect
 
-# Userdata partition
-/dev/block/platform/bootdevice/by-name/md_udc        /metadata   ext4        noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
-/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,inlinecrypt latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+# Metadata partition
+/dev/block/by-name/md_udc                       /metadata        ext4     noatime,nosuid,nodev,discard        wait,check,formattable,first_stage_mount
+
+# Userdata partition (f2fs, matches stock fstab.mt6761 exactly)
+/dev/block/by-name/userdata                     /data            f2fs     noatime,nosuid,nodev,discard,inlinecrypt   latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
-/dev/block/by-name/para		  /misc			emmc		defaults					defaults
+/dev/block/by-name/para                         /misc            emmc     defaults                            defaults
+
+# No /cache entry — confirmed absent from stock fstab.mt6761 (this device is cacheless)
