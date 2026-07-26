@@ -11,11 +11,8 @@ vendor                                                 /vendor                ex
 
 # Userdata partition
 /dev/block/platform/bootdevice/by-name/md_udc        /metadata   ext4        noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
-/dev/block/platform/bootdevice/by-name/userdata  /data  ext4  noatime,nosuid,nodev,noauto_da_alloc,errors=panic  wait,check,formattable,fileencryption=aes-256-xts
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,inlinecrypt latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
 /dev/block/by-name/para		  /misc			emmc		defaults					defaults
-
-# Use tranfs as cache										wait,check,formattable
-/dev/block/platform/bootdevice/by-name/cache         /cache       ext4        noatime,nosuid,nodev,noauto_da_alloc,discard          wait,check,formattable
