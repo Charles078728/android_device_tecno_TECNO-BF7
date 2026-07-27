@@ -150,3 +150,6 @@ TW_USB_STORAGE := true
 #No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+# Boot Control for A/B
+TW_USE_BOOTCTRL := true
+
