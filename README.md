@@ -6,7 +6,7 @@ Blocking checks
 - [✔] Working Touch, screen
 - [ X ] Backup to internal/microSD
 - [ X ] Restore from internal/microSD
-- [ X ] reboot to system
+- [ X ] reboot to system - (automatic reboot to twrp)
 - [?] ADB
 
 Medium checks
@@ -24,21 +24,21 @@ Minor checks
 - [?] MTP export
 - [✔] reboot to bootloader
 - [✔] reboot to recovery
-- [ X ] poweroff
+- [✔] poweroff
 - [✔] battery level
 - [✔] temperature
 - [?] encrypted backups
-- [ X ] input devices via USB (USB-OTG) - keyboard and mouse and storage
+- [?] input devices via USB (USB-OTG) - keyboard and mouse and storage
 - [✔] USB mass storage export
-- [?] set brightness
-- [?] vibrate
-- [?] screenshot
+- [✔] set brightness
+- [✔] vibrate
+- [X] screenshot
 - [✔] partition SD card
 - [✔] Fastbootd
-- [ X ] Flashing image or magisk.zip file
+- [✔] Flashing image or magisk.zip file
 
 # Clone (example)
     git clone https://github.com/Charles078728/android_device_TECNO-BF7.git -b main device/tecno/BF7 
 
 # Build
-    export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch pbrp-eng; mka bootimage
+    export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_BF7-eng; mka bootimage
