@@ -57,4 +57,4 @@
 
 # External storage
 /external_sd    auto  /devices/platform/externdevice* /devices/platform/externdevice  flags=voldmanaged=sdcard1:auto,encryptable=userdata;display="MicroSD Card";storage;wipeingui;removable
-/usb-otg        auto  /devices/platform/mt_usb*       /devices/platform/mt_usb     flags=voldmanaged=usbotg:auto,encryptable=userdata;display="USB OTG";storage;wipeingui;removable
+/usb-otg        vfat  /devices/platform/mt_usb*       /devices/platform/mt_usb     flags=voldmanaged=usbotg:auto,encryptable=userdata;display="USB OTG";storage;wipeingui;removable
