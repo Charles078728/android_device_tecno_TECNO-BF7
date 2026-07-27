@@ -1,0 +1,5 @@
+# Additional fstab — processed AFTER vendor fstab to override /data mount options
+# Vendor fstab re-adds tran_gc which causes EINVAL. This ensures simplified flags.
+
+# Userdata partition (simplified mount flags, no vendor-specific options)
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065 latemount,wait,check,formattable,resize,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
