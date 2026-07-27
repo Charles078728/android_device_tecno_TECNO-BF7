@@ -6,3 +6,11 @@ ro.sys.usb.storage.type=mtp
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
+
+# ADB - force root adb in recovery
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+
+# persist adb
+persist.adb.nonblocking_ffs=1
