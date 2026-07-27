@@ -153,12 +153,6 @@ TW_HAS_NO_RECOVERY_PARTITION := true
 # Boot Control for A/B
 TW_USE_BOOTCTRL := true
 
-# Crypto / FBE decryption
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_USE_FSCRYPT_POLICY := 2
-TW_FORCE_KEYMASTER_VER := true
-
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
 
