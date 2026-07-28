@@ -12,8 +12,9 @@ vendor                                          /vendor          ext4     ro    
 # Metadata partition
 /dev/block/by-name/md_udc                       /metadata        ext4     noatime,nosuid,nodev,discard        wait,check,formattable,first_stage_mount
 
-# Userdata partition (NO latemount — TWRP must mount immediately before vendor fstab overrides flags)
-/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065 wait,check,formattable,resize,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+# Userdata partition (crypto flags removed — TW_INCLUDE_CRYPTO excluded for size)
+# Pre-mounted by init.recovery.mt6761.rc's on fs trigger to bypass vendor fstab
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev wait,check,formattable,resize
 
 # Transsion-specific partition (from stock fstab.mt6761)
 /dev/block/by-name/tranfs                       /tranfs          ext4     noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable,nofail
