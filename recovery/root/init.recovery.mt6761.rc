@@ -24,7 +24,3 @@ on post-fs
     symlink /dev/block/mapper/pl_b /dev/block/by-name/preloader_raw_b
     symlink /dev/block/mapper/pl_a /dev/block/platform/bootdevice/by-name/preloader_raw_a
     symlink /dev/block/mapper/pl_b /dev/block/platform/bootdevice/by-name/preloader_raw_b
-
-on boot
-    # Force clear Transsion BCB flag in /para when TWRP starts
-    exec -- /system/bin/dd if=/dev/zero of=/dev/block/by-name/para bs=1024 count=32
