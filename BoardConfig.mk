@@ -147,8 +147,20 @@ TW_USB_STORAGE := true
 #No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
-# Boot Control for A/B
+# Partition / Misc handling
+BOARD_HAS_NO_MISC_PARTITION := false
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
+
+# Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
+
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.0-service.recovery
+
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.0.so
 
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
