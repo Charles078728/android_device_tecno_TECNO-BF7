@@ -151,8 +151,10 @@ TW_HAS_NO_RECOVERY_PARTITION := true
 BOARD_HAS_NO_MISC_PARTITION := false
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 
+
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
+TW_BOOT_CONTROL_VERSION := 1.1
 
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hardware.boot@1.0-impl \
