@@ -80,7 +80,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_DYNAMIC_PARTITION_ENABLE := true
 
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
-BOARD_MAIN_SIZE  := 9122611200
+BOARD_MAIN_SIZE := 9122611200
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_PARTITION_LIST += \
     system \
@@ -161,13 +161,6 @@ BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
 TW_BOOT_CONTROL_VERSION := 1.1
-
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.boot@1.1-mtkimpl \
-    bootctrl.mt6761
-
-TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.1.so
 
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
