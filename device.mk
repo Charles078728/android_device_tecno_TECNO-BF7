@@ -31,11 +31,6 @@ PRODUCT_PACKAGES += \
     bootctrl.mt6761.recovery \
     bootctl
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-
 # OTA and Update Tools
 PRODUCT_PACKAGES += \
     otapreopt_script \
