@@ -139,7 +139,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_DEFAULT_BRIGHTNESS := 2047
 TW_MAX_BRIGHTNESS := 4095
-TW_HAS_MTP := true
+TW_HAS_MTP := false
 
 # Tools
 TW_INCLUDE_FB2PNG        := true
