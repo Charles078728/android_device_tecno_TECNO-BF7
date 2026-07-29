@@ -4,7 +4,7 @@
 Blocking checks
 - [✔] Correct screen/recovery size
 - [✔] Working Touch, screen
-- [ X ] Backup to internal/microSD
+- [✔] Backup to internal/microSD - MicroSD only
 - [ X ] Restore from internal/microSD
 - [ X ] reboot to system - (automatic reboot to twrp)
 - [?] ADB
@@ -32,7 +32,7 @@ Minor checks
 - [✔] USB mass storage export
 - [✔] set brightness
 - [✔] vibrate
-- [X] screenshot
+- [✔] screenshot
 - [✔] partition SD card
 - [✔] Fastbootd
 - [✔] Flashing image or magisk.zip file
