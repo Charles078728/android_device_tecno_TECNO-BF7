@@ -117,8 +117,8 @@ BOARD_USES_MTK_HARDWARE := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Vendor Modules
-
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules) $(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules)\")
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := false
@@ -130,11 +130,11 @@ TW_MAX_BRIGHTNESS := 4095
 TW_HAS_MTP := true
 
 # Tools
-TW_INCLUDE_FB2PNG       := true
-TW_INCLUDE_REPACKTOOLS  := true
-TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_RESETPROP    := true
-TW_INCLUDE_LPTOOLS      := true
+TW_INCLUDE_FB2PNG        := true
+TW_INCLUDE_REPACKTOOLS   := true
+TW_INCLUDE_LIBRESETPROP  := true
+TW_INCLUDE_RESETPROP     := true
+TW_INCLUDE_LPTOOLS       := true
 TW_INCLUDE_RESETPROP_SOURCE := true
 TW_INCLUDE_LIBRESETPROP_SOURCE := true
 TW_INCLUDE_NO_CRYPTO := true
@@ -144,26 +144,23 @@ BOARD_USES_METADATA_PARTITION := true
 # USB OTG
 TW_USB_STORAGE := true
 
-#No Recovery Partition 
+# No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
 # Partition / Misc handling
 BOARD_HAS_NO_MISC_PARTITION := false
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 
-
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
 TW_BOOT_CONTROL_VERSION := 1.1
 
 TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-service.recovery
+    android.hardware.boot@1.1-mtkimpl \
+    bootctrl.mt6761
 
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.0.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.1.so
 
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
-
