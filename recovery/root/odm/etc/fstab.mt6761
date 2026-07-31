@@ -3,6 +3,6 @@
 # This file uses clean f2fs mount options (no inlinecrypt, no tran_gc)
 
 /dev/block/by-name/md_udc   /metadata   ext4   noatime,nosuid,nodev,discard        wait,check,formattable
-/dev/block/by-name/userdata  /data       f2fs   noatime,nosuid,nodev wait,check,formattable
+/dev/block/by-name/userdata  /data       f2fs   noatime,nosuid,nodev,discard   wait,check,formattable,resize
 
 /dev/block/by-name/tranfs    /tranfs     ext4   noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable,nofail
