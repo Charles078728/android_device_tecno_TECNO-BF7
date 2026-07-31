@@ -2,4 +2,4 @@
 # Pre-mounted by init.recovery.mt6761.rc to bypass vendor fstab flags
 
 # Userdata partition (crypto flags removed — no TW_INCLUDE_CRYPTO)
-/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard   wait,check,formattable,resize
