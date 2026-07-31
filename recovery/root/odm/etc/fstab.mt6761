@@ -2,8 +2,7 @@
 # TWRP checks /odm/etc/fstab.<hardware> BEFORE /vendor/etc/fstab.<hardware>
 # This file uses clean f2fs mount options (no inlinecrypt, no tran_gc)
 
-/dev/block/by-name/md_udc   /metadata   ext4   noatime,nosuid,nodev,discard        wait,check,formattable,first_stage_mount
+/dev/block/by-name/md_udc   /metadata   ext4   noatime,nosuid,nodev,discard        wait,check,formattable
+/dev/block/by-name/userdata  /data       f2fs   noatime,nosuid,nodev wait,check,formattable
 
-/dev/block/by-name/userdata  /data       f2fs   noatime,nosuid,nodev wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
-
-/dev/block/by-name/tranfs    /tranfs     ext4   noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable,nofail,first_stage_mount
+/dev/block/by-name/tranfs    /tranfs     ext4   noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable,nofail
