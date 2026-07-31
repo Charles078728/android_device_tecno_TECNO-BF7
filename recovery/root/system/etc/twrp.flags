@@ -2,7 +2,7 @@
 
 # Logical / dynamic partitions (emmc type to avoid mount probe on mapper devices)
 /system_image emmc /dev/block/mapper/system flags=backup=1;flashimg=1;slotselect
-/vendor_image emmc /dev/block/mapper/vendor flags=backup=1;flashimg=1;slotselect
+/vendor_image emmc /dev/block/mapper/vendor flags=backup=1;flashimg=1;slotselect;mounttodecrypt
 /product_image emmc /dev/block/mapper/product flags=backup=1;flashimg=1;slotselect
 /system_ext_image emmc /dev/block/mapper/system_ext flags=backup=1;flashimg=1;slotselect
 
