@@ -43,12 +43,5 @@ OF_UNBIND_SDCARD_F2FS := 1
 # Force "F2FS" when formatting /data
 OF_FORCE_DATA_FORMAT_F2FS := 1
 
-# Force casefolding to avoid /data issues
-OF_FORCE_CASEFOLDING := 1
-OF_USE_DMCTL := 1
-
-# Enable the FRP reset addon
-OF_ENABLE_FRP_ADDON := 1
-
 # This device uses AIDL boot service instead of legacy HIDL
 OF_USE_AIDL_BOOT_CONTROL := 1
