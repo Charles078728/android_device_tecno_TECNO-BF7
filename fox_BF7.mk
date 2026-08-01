@@ -42,6 +42,3 @@ OF_UNBIND_SDCARD_F2FS := 1
 
 # Force "F2FS" when formatting /data
 OF_FORCE_DATA_FORMAT_F2FS := 1
-
-# This device uses AIDL boot service instead of legacy HIDL
-OF_USE_AIDL_BOOT_CONTROL := 1
