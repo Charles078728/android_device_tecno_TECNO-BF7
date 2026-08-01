@@ -48,16 +48,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ];
     export FOX_ENABLE_KERNELSU_SUPPORT=1
     export FOX_ENABLE_KERNELSU_NEXT_SUPPORT=1
     export FOX_ENABLE_SUKISU_SUPPORT=1
-    export FOX_MOVE_MAGISK_INSTALLER_TO_RAMDISK=1
-
+    
     # A/B partitioning
     export FOX_VIRTUAL_AB_DEVICE=1
     export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
     export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-
-    # Use latest "magiskboot" binaries as this is a relatively new device
-    export FOX_USE_UPDATED_MAGISKBOOT=1
-
     # Very interesting, drops the ramdisk image size by ~6MB
     # While keeping the same boot times. Needs testing.
     # export FOX_COMPRESS_EXECUTABLES=1
