@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pbrp_BF7.mk
+    $(LOCAL_DIR)/pb_BF7.mk
 
 COMMON_LUNCH_CHOICES := \
     pb_BF7-eng
