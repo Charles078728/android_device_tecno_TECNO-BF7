@@ -15,11 +15,11 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree'
         required: true
-        default: 'https://github.com/Charles078728/android_device_tecno_TECNO-BF7'
+        default: 'https://github.com/Charles078728/ofrp_bf7'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
-        default: 'fox'
+        default: 'main'
       DEVICE_PATH:
         description: 'Specify your device path.'
         required: true
