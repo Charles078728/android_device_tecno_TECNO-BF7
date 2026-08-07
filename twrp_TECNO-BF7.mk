@@ -14,13 +14,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from TECNO-BF7 device
-$(call inherit-product, device/tecno/BF7/device.mk)
+$(call inherit-product, device/tecno/TECNO-BF7/device.mk)
 
-PRODUCT_DEVICE := BF7
-PRODUCT_NAME := twrp_BF7
+PRODUCT_DEVICE := TECNO-BF7
+PRODUCT_NAME := twrp_TECNO-BF7
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO BF7
-PRODUCT_MANUFACTURER := tecno
+PRODUCT_MANUFACTURER := TECNO
 
 PRODUCT_GMS_CLIENTID_BASE := android-tecno
 
