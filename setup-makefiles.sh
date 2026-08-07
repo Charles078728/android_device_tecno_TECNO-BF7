@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=BF7
+DEVICE=TECNO-BF7
 VENDOR=tecno
 
 # Load extract_utils and do some sanity checks
