@@ -151,6 +151,9 @@ TW_USB_STORAGE := true
 # No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+# No Vibration
+TW_NO_HAPTICS := true
+
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
 TW_BOOT_CONTROL_VERSION := 1.1
