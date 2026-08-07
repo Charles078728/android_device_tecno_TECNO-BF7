@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/tecno/TECNO-BF7
+LOCAL_PATH := device/tecno/BF7
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
