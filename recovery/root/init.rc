@@ -4,6 +4,7 @@
 
 import /init.recovery.mt6761.rc
 import /init.recovery.trustonic.rc
+import /init.mt6761.usb.rc
 
 on early-init
     # Set the security context of /postinstall if present.
