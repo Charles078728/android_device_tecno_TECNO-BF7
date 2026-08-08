@@ -2,4 +2,4 @@
 # Pre-mounted by init.recovery.mt6761.rc to bypass vendor fstab flags
 
 # Userdata partition (crypto flags removed — no TW_INCLUDE_CRYPTO)
-/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev wait,check,formattable,resize
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,tran_gc latemount,wait,check,quota,reservedsize=128M,formattable,resize,checkpoint=fs,encyptable=/dev/block/by-name/userdata,keydirectory=/metadata/vold/metadata_encryption,fscompress
