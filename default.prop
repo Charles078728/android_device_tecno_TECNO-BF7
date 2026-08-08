@@ -1,12 +1,6 @@
 # Fstab
 ro.postinstall.fstab.prefix=/system
 
-# USB MTP
-ro.sys.usb.storage.type=mtp
-
-# Crypto
-ro.crypto.volume.filenames_mode=aes-256-cts
-
 # ADB - force root adb in recovery
 ro.adb.secure=0
 ro.secure=0
