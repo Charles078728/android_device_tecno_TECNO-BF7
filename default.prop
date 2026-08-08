@@ -5,6 +5,8 @@ ro.postinstall.fstab.prefix=/system
 ro.adb.secure=0
 ro.secure=0
 ro.debuggable=1
+persist.sys.usb.config=adb,mtp
+sys.usb.config=adb,mtp
 
 # persist adb
 persist.adb.nonblocking_ffs=1
