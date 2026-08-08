@@ -153,6 +153,7 @@ TW_HAS_NO_RECOVERY_PARTITION := true
 
 # No Vibration
 TW_NO_HAPTICS := true
+TW_NO_FASTBOOT_BOOT := true
 
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
