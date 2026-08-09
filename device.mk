@@ -18,11 +18,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-service.trustonic \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-impl.recovery \
     android.hardware.boot@1.0-service \
     bootctrl.mt6761 \
-    bootctrl.mt6761.recovery 
+    bootctrl.mt6761.recovery \
+    vendor.trustonic.tee@1.0-service \
+    vendor.trustonic.teeregistry@1.0-service
 
 PRODUCT_PACKAGES += \
     bootctrl
