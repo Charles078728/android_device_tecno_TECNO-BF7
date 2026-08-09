@@ -14,7 +14,7 @@ vendor                                          /vendor          ext4     ro    
 
 # Userdata partition (crypto flags removed — TW_INCLUDE_CRYPTO excluded for size)
 # Pre-mounted by init.recovery.mt6761.rc's on fs trigger to bypass vendor fstab
-/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard   wait,check,formattable,resize
+/dev/block/by-name/userdata    /data    f2fs    noatime,nosuid,nodev,discard    wait,check,formattable,resize
 # Transsion-specific partition (from stock fstab.mt6761)
 /dev/block/by-name/tranfs                       /tranfs          ext4     noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable,nofail,first_stage_mount
 
