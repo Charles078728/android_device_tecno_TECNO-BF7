@@ -6,7 +6,7 @@ Blocking checks
 - [✔] Working Touch, screen
 - [✔] Backup to internal/microSD - MicroSD only
 - [ X ] Restore from internal/microSD
-- [ X ] reboot to system - (automatic reboot to twrp)
+- [✔] reboot to system(finally)
 - [?] ADB
 
 Medium checks
