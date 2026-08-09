@@ -5,7 +5,7 @@ Blocking checks
 - [✔] Correct screen/recovery size
 - [✔] Working Touch, screen
 - [✔] Backup to internal/microSD - MicroSD only
-- [ X ] Restore from internal/microSD
+- [✔] Restore from internal/microSD
 - [✔] reboot to system(finally)
 - [?] ADB
 
