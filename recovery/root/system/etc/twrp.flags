@@ -61,6 +61,3 @@
 # External storage
 /external_sd   auto   /dev/block/mmcblk1p1   /dev/block/mmcblk1   flags=display="MicroSD Card";storage;wipeingui;removable
 /usb-otg       auto   /dev/block/sda1        /dev/block/sda      flags=display="USB OTG";storage;wipeingui;removable
-
-# Data
-/userdata    f2fs    /dev/block/by-name/userdata    flags=fileid=userdata;display="Data";backup=1;settingsstorage
