@@ -165,5 +165,8 @@ TW_NO_FASTBOOT_BOOT := true
 TW_USE_BOOTCTRL := true
 TW_BOOT_CONTROL_VERSION := 1.0
 
+# Decryption
+TW_INCLUDE_CRYPTO := true
+
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
