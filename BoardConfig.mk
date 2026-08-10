@@ -169,7 +169,6 @@ TW_BOOT_CONTROL_VERSION := 1.0
 
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
-TW_INCLUDE_PYTHON := true
 TW_EXCLUDE_NANO := false
 TW_EXCLUDE_APEX := true
 TW_INCLUDE_LPDUMP := true
