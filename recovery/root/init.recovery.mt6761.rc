@@ -1,3 +1,5 @@
+import /init.recovery.trustonic.rc
+
 on init
     setprop sys.usb.configfs 1
     export LD_LIBRARY_PATH /system/lib:/vendor/lib64:/vendor/lib64/hw:/system/lib/hw
@@ -39,13 +41,13 @@ service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     oneshot
     seclabel u:r:recovery:s0
 
-service keystore2 /system/bin/keystore2 /tmp/misc/keystore2
+service keystore /system/bin/keystore2 /tmp/misc/keystore2
     user root
     group root drmrpc readproc log
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic
+service keymaster-4-0 /vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic
     user root
     group root drmrpc
     disabled
@@ -65,7 +67,7 @@ service tee-1-1 /vendor/bin/hw/vendor.trustonic.tee@1.1-service
     seclabel u:r:recovery:s0
     
 on property:vendor.sys.listener.registered=true
-    start keymaster-4-1
+    start keymaster-4-0
     start gatekeeper-1-0
     start mobicore
     start tee-1-1
@@ -74,25 +76,25 @@ on property:hwservicemanager.ready=true
     write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry ++ (FBE encrypted)"
     start mobicore
     write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry -- (FBE encrypted)"
-    start keymaster-4-1
+    start keymaster-4-0
     start gatekeeper-1-0
     start tee-1-1
 
 on property:ro.crypto.state=unsupported
     stop mobicore
-    stop keymaster-4-1
+    stop keymaster-4-0
     stop gatekeeper-1-0
     stop tee-1-1
 
 on property:ro.crypto.state=unencrypted
     stop mobicore
-    stop keymaster-4-1
+    stop keymaster-4-0
     stop gatekeeper-1-0
     stop tee-1-1
 
 on property:twrp.decrypt.done=true
     stop mobicore
-    stop keymaster-4-1
+    stop keymaster-4-0
     stop gatekeeper-1-0
     stop tee-1-1
 
