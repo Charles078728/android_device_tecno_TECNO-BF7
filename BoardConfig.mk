@@ -38,6 +38,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 BOARD_RAMDISK_USE_LZ4 := true
+LZMA_RAMDISK_TARGETS := boot,recovery
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -142,22 +143,24 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_FRAMERATE := 90
 
-# Crypt
+# USB OTG
+TW_USB_STORAGE := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 
-# USB OTG
-TW_USB_STORAGE := true
+# Reboot System Fixer
+TW_NO_FASTBOOT_BOOT := true
 
 # No Recovery Partition 
 TW_HAS_NO_RECOVERY_PARTITION := true
 
 # No Vibration
 TW_NO_HAPTICS := true
-TW_NO_FASTBOOT_BOOT := true
+TW_HAS_DOWNLOAD_MODE := false
+TW_EXCLUDE_SUPERSU := true
 
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
