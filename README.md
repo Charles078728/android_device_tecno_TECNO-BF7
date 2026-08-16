@@ -7,17 +7,17 @@ Blocking checks
 - [✔] Backup to internal/microSD - MicroSD only
 - [✔] Restore from internal/microSD
 - [✔] reboot to system(finally)
-- [X] ADB
+- [ X ] ADB
 
 Medium checks
-- [X] update.zip sideload
+- [ X ] update.zip sideload
 - [?] UI colors (red/blue inversions)
 - [?] Screen goes off and on
 - [?] F2FS/EXT4 Support, exFAT/NTFS where supported
 - [✔] all important partitions listed in mount/backup lists
 - [ X ] backup/restore to/from external storage
 - [?] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [X] decrypt /data
+- [ X ] decrypt /data
 - [✔] Correct date
 
 Minor checks
@@ -29,13 +29,13 @@ Minor checks
 - [✔] temperature
 - [?] encrypted backups
 - [?] input devices via USB (USB-OTG) - keyboard and mouse and storage
-- [X] USB mass storage export
+- [ X ] USB mass storage export
 - [✔] set brightness
 - [✔] vibrate
-- [X] screenshot
+- [ X ] screenshot
 - [✔] partition SD card
-- [X] Fastbootd
-- [X] Flashing image or magisk.zip file
+- [ X ] Fastbootd
+- [ X ] Flashing image or magisk.zip file
 
 # Clone (example)
     git clone https://github.com/Charles078728/android_device_TECNO-BF7.git -b main device/tecno/BF7 
