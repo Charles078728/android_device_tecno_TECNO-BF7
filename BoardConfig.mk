@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 BOARD_RAMDISK_USE_LZ4 := true
-LZMA_RAMDISK_TARGETS := boot,recovery
+LZMA_RAMDISK_TARGETS := recovery
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -159,8 +159,6 @@ TW_HAS_NO_RECOVERY_PARTITION := true
 
 # No Vibration
 TW_NO_HAPTICS := true
-TW_HAS_DOWNLOAD_MODE := false
-TW_EXCLUDE_SUPERSU := true
 
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
@@ -169,5 +167,3 @@ TW_BOOT_CONTROL_VERSION := 1.0
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRPAPP := true
-TW_EXCLUDE_NANO := true
-TW_EXCLUDE_BASH := true
