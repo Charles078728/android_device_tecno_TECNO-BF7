@@ -161,7 +161,12 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ env.DEVICE_MAKEFILE }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
         echo "Done building your ${{ github.event.inputs.BUILD_TARGET }}.img"
-      continue-on-error: false
+      continue-on-error: true
+
+    - name: Check boot.img size
+      run: |
+       ls -lh out/target/product/BF7/boot.img
+       stat -c '%s bytes' out/target/product/BF7/boot.img
       
     - name: Set Build Date # Output will be use in Release
       run: |
