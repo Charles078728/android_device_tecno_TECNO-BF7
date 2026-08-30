@@ -1,4 +1,5 @@
 on early-init
+    setprop vendor.usb.controller "musb-hdrc"
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
 on post-fs
