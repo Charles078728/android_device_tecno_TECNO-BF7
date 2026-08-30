@@ -1,10 +1,15 @@
-#fstab file for TECNO BF7 (Spark Go 2023)
+# Main Image Partitions
+/system_image  emmc		/dev/block/bootdevice/by-name/system			flags=display="System (Image)";backup=1;flashimg=1;slotselect;
+/vendor_image  emmc		/dev/block/bootdevice/by-name/vendor			flags=display="Vendor (Image)";backup=1;flashimg=1;slotselect;
+/product_image emmc		/dev/block/bootdevice/by-name/product          flags=display="Product (Image)";backup=1;flashimg=1;slotselect;
+/systemext_image  emmc		/dev/block/bootdevice/by-name/system_ext			flags=display="Systemext (Image)";backup=1;flashimg=1;slotselect;
 
-# Logical / dynamic partitions (emmc type to avoid mount probe on mapper devices)
-/system_image ext4 /dev/block/mapper/system flags=backup=1;flashimg=1;slotselect
-/vendor_image ext4 /dev/block/mapper/vendor flags=backup=1;flashimg=1;slotselect;
-/product_image ext4 /dev/block/mapper/product flags=backup=1;flashimg=1;slotselect
-/system_ext_image ext4 /dev/block/mapper/system_ext flags=backup=1;flashimg=1;slotselect
+# Other Partitions
+/system_root   ext4		/dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect;
+/vendor        ext4		/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;
+/system_ext    ext4		/dev/block/bootdevice/by-name/system_ext                    flags=display="System Ext";backup=0;wipeingui;slotselect;
+/product       ext4		/dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect;
+
 
 # Metadata
 /metadata ext4 /dev/block/by-name/md_udc flags=backup=1;display="Metadata"
