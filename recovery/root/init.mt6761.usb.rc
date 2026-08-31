@@ -109,7 +109,7 @@ on charger
     setprop vendor.usb.acm_port0 ""
     setprop vendor.usb.acm_port1 ""
     setprop vendor.usb.acm_enable 0
-    setprop otg.enabled 0
+    setprop otg.enabled 1
     setprop sys.usb.config hid
 
 ### more command at init.usb.configfs.rc ###
