@@ -3,7 +3,6 @@
 # Do NOT duplicate USB configfs here to avoid overwriting MTK USB settings
 
 import /init.recovery.mt6761.rc
-import /init.recovery.trustonic.rc
 import /init.mt6761.usb.rc
 
 on early-init
